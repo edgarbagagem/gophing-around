@@ -1,16 +1,16 @@
 package main
 
 func main() {
-	println(HelloWorld())
+	println(Hello(""))
 }
 
 const englishHelloPrefix = "Hello, "
 const exclamationPoint = "!"
 
-func HelloWorld() string {
-	return Hello("world")
-}
-
 func Hello(name string) string {
+	if name == "" {
+		name = "world"
+	}
+
 	return englishHelloPrefix + name + exclamationPoint
 }
